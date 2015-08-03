@@ -1,0 +1,10 @@
+framework module PlusMe {
+  umbrella header "PlusMe.h"
+
+  export *
+  module * { export * }
+}
+
+module PlusMe.Swift {
+    header "PlusMe-Swift.h"
+}
