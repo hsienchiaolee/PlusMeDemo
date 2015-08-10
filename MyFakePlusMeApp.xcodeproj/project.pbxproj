@@ -14,8 +14,8 @@
 		2A95A4B71B6DDC040041FCD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A4B51B6DDC040041FCD3 /* LaunchScreen.xib */; };
 		2A95A4C31B6DDC040041FCD3 /* MyFakePlusMeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A4C21B6DDC040041FCD3 /* MyFakePlusMeAppTests.swift */; };
 		2AB5FCF91B6EFAE000537C20 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */; };
-		2AB5FD071B6F063700537C20 /* PlusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB5FD061B6F063700537C20 /* PlusMe.framework */; };
-		2AB5FD081B6F063B00537C20 /* PlusMe.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2AB5FD061B6F063700537C20 /* PlusMe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2AF8FA931B71570D00FED65F /* PlusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF8FA921B71570D00FED65F /* PlusMe.framework */; };
+		2AF8FA941B71571000FED65F /* PlusMe.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2AF8FA921B71570D00FED65F /* PlusMe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2AB5FD081B6F063B00537C20 /* PlusMe.framework in CopyFiles */,
+				2AF8FA941B71571000FED65F /* PlusMe.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +53,7 @@
 		2A95A4C11B6DDC040041FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A95A4C21B6DDC040041FCD3 /* MyFakePlusMeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFakePlusMeAppTests.swift; sourceTree = "<group>"; };
 		2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		2AB5FD061B6F063700537C20 /* PlusMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlusMe.framework; sourceTree = "<group>"; };
+		2AF8FA921B71570D00FED65F /* PlusMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlusMe.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AB5FD071B6F063700537C20 /* PlusMe.framework in Frameworks */,
+				2AF8FA931B71570D00FED65F /* PlusMe.framework in Frameworks */,
 				2AB5FCF91B6EFAE000537C20 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +136,7 @@
 		2A95A4CC1B6DDC200041FCD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2AB5FD061B6F063700537C20 /* PlusMe.framework */,
+				2AF8FA921B71570D00FED65F /* PlusMe.framework */,
 				2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */,
 			);
 			name = Frameworks;
@@ -187,6 +187,7 @@
 		2A95A49F1B6DDC040041FCD3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Kai Lee";
 				TargetAttributes = {
