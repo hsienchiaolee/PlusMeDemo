@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A45F82A1B7B22FB0053954E /* PlusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A45F8291B7B22FB0053954E /* PlusMe.framework */; };
-		2A45F82B1B7B23010053954E /* PlusMe.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A45F8291B7B22FB0053954E /* PlusMe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A01C6781B7B2F1800A797E3 /* PlusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A01C6771B7B2F1800A797E3 /* PlusMe.framework */; };
+		2A01C6791B7B2F2100A797E3 /* PlusMe.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A01C6771B7B2F1800A797E3 /* PlusMe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A95A4AD1B6DDC040041FCD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A4AC1B6DDC040041FCD3 /* AppDelegate.swift */; };
 		2A95A4AF1B6DDC040041FCD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A4AE1B6DDC040041FCD3 /* ViewController.swift */; };
 		2A95A4B21B6DDC040041FCD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A4B01B6DDC040041FCD3 /* Main.storyboard */; };
@@ -35,23 +35,23 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2A45F82B1B7B23010053954E /* PlusMe.framework in CopyFiles */,
+				2A01C6791B7B2F2100A797E3 /* PlusMe.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2A45F8291B7B22FB0053954E /* PlusMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlusMe.framework; sourceTree = "<group>"; };
+		2A01C6771B7B2F1800A797E3 /* PlusMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlusMe.framework; sourceTree = "<group>"; };
 		2A95A4A71B6DDC040041FCD3 /* PlusMeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlusMeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A95A4AB1B6DDC040041FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A95A4AB1B6DDC040041FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		2A95A4AC1B6DDC040041FCD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A95A4AE1B6DDC040041FCD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A95A4B11B6DDC040041FCD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A95A4B31B6DDC040041FCD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2A95A4B61B6DDC040041FCD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2A95A4BC1B6DDC040041FCD3 /* MyFakePlusMeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFakePlusMeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A95A4C11B6DDC040041FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A95A4BC1B6DDC040041FCD3 /* PlusMeDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlusMeDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A95A4C11B6DDC040041FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		2A95A4C21B6DDC040041FCD3 /* MyFakePlusMeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFakePlusMeAppTests.swift; sourceTree = "<group>"; };
 		2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A45F82A1B7B22FB0053954E /* PlusMe.framework in Frameworks */,
+				2A01C6781B7B2F1800A797E3 /* PlusMe.framework in Frameworks */,
 				2AB5FCF91B6EFAE000537C20 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,8 +79,8 @@
 		2A95A49E1B6DDC040041FCD3 = {
 			isa = PBXGroup;
 			children = (
-				2A95A4A91B6DDC040041FCD3 /* MyFakePlusMeApp */,
-				2A95A4BF1B6DDC040041FCD3 /* MyFakePlusMeAppTests */,
+				2A95A4A91B6DDC040041FCD3 /* PlusMeDemo */,
+				2A95A4BF1B6DDC040041FCD3 /* PlusMeDemoTests */,
 				2A95A4CC1B6DDC200041FCD3 /* Frameworks */,
 				2A95A4A81B6DDC040041FCD3 /* Products */,
 			);
@@ -90,12 +90,12 @@
 			isa = PBXGroup;
 			children = (
 				2A95A4A71B6DDC040041FCD3 /* PlusMeDemo.app */,
-				2A95A4BC1B6DDC040041FCD3 /* MyFakePlusMeAppTests.xctest */,
+				2A95A4BC1B6DDC040041FCD3 /* PlusMeDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2A95A4A91B6DDC040041FCD3 /* MyFakePlusMeApp */ = {
+		2A95A4A91B6DDC040041FCD3 /* PlusMeDemo */ = {
 			isa = PBXGroup;
 			children = (
 				2A95A4AC1B6DDC040041FCD3 /* AppDelegate.swift */,
@@ -105,7 +105,7 @@
 				2A95A4B51B6DDC040041FCD3 /* LaunchScreen.xib */,
 				2A95A4AA1B6DDC040041FCD3 /* Supporting Files */,
 			);
-			path = MyFakePlusMeApp;
+			path = PlusMeDemo;
 			sourceTree = "<group>";
 		};
 		2A95A4AA1B6DDC040041FCD3 /* Supporting Files */ = {
@@ -116,13 +116,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2A95A4BF1B6DDC040041FCD3 /* MyFakePlusMeAppTests */ = {
+		2A95A4BF1B6DDC040041FCD3 /* PlusMeDemoTests */ = {
 			isa = PBXGroup;
 			children = (
 				2A95A4C21B6DDC040041FCD3 /* MyFakePlusMeAppTests.swift */,
 				2A95A4C01B6DDC040041FCD3 /* Supporting Files */,
 			);
-			path = MyFakePlusMeAppTests;
+			path = PlusMeDemoTests;
 			sourceTree = "<group>";
 		};
 		2A95A4C01B6DDC040041FCD3 /* Supporting Files */ = {
@@ -136,7 +136,7 @@
 		2A95A4CC1B6DDC200041FCD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2A45F8291B7B22FB0053954E /* PlusMe.framework */,
+				2A01C6771B7B2F1800A797E3 /* PlusMe.framework */,
 				2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */,
 			);
 			name = Frameworks;
@@ -145,9 +145,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A95A4A61B6DDC040041FCD3 /* MyFakePlusMeApp */ = {
+		2A95A4A61B6DDC040041FCD3 /* PlusMeDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A95A4C61B6DDC040041FCD3 /* Build configuration list for PBXNativeTarget "MyFakePlusMeApp" */;
+			buildConfigurationList = 2A95A4C61B6DDC040041FCD3 /* Build configuration list for PBXNativeTarget "PlusMeDemo" */;
 			buildPhases = (
 				2A95A4A31B6DDC040041FCD3 /* Sources */,
 				2A95A4A41B6DDC040041FCD3 /* Frameworks */,
@@ -158,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = MyFakePlusMeApp;
+			name = PlusMeDemo;
 			productName = MyFakePlusMeApp;
 			productReference = 2A95A4A71B6DDC040041FCD3 /* PlusMeDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2A95A4BB1B6DDC040041FCD3 /* MyFakePlusMeAppTests */ = {
+		2A95A4BB1B6DDC040041FCD3 /* PlusMeDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A95A4C91B6DDC040041FCD3 /* Build configuration list for PBXNativeTarget "MyFakePlusMeAppTests" */;
+			buildConfigurationList = 2A95A4C91B6DDC040041FCD3 /* Build configuration list for PBXNativeTarget "PlusMeDemoTests" */;
 			buildPhases = (
 				2A95A4B81B6DDC040041FCD3 /* Sources */,
 				2A95A4B91B6DDC040041FCD3 /* Frameworks */,
@@ -176,9 +176,9 @@
 			dependencies = (
 				2A95A4BE1B6DDC040041FCD3 /* PBXTargetDependency */,
 			);
-			name = MyFakePlusMeAppTests;
+			name = PlusMeDemoTests;
 			productName = MyFakePlusMeAppTests;
-			productReference = 2A95A4BC1B6DDC040041FCD3 /* MyFakePlusMeAppTests.xctest */;
+			productReference = 2A95A4BC1B6DDC040041FCD3 /* PlusMeDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -200,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2A95A4A21B6DDC040041FCD3 /* Build configuration list for PBXProject "MyFakePlusMeApp" */;
+			buildConfigurationList = 2A95A4A21B6DDC040041FCD3 /* Build configuration list for PBXProject "PlusMeDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -213,8 +213,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A95A4A61B6DDC040041FCD3 /* MyFakePlusMeApp */,
-				2A95A4BB1B6DDC040041FCD3 /* MyFakePlusMeAppTests */,
+				2A95A4A61B6DDC040041FCD3 /* PlusMeDemo */,
+				2A95A4BB1B6DDC040041FCD3 /* PlusMeDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,7 +262,7 @@
 /* Begin PBXTargetDependency section */
 		2A95A4BE1B6DDC040041FCD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2A95A4A61B6DDC040041FCD3 /* MyFakePlusMeApp */;
+			target = 2A95A4A61B6DDC040041FCD3 /* PlusMeDemo */;
 			targetProxy = 2A95A4BD1B6DDC040041FCD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -376,7 +376,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = MyFakePlusMeApp/Info.plist;
+				INFOPLIST_FILE = PlusMeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PlusMeDemo;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PlusMe.framework/Headers/**";
@@ -391,7 +391,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = MyFakePlusMeApp/Info.plist;
+				INFOPLIST_FILE = PlusMeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PlusMeDemo;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PlusMe.framework/Headers/**";
@@ -405,15 +405,16 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MyFakePlusMeAppTests/Info.plist;
+				INFOPLIST_FILE = PlusMeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFakePlusMeApp.app/MyFakePlusMeApp";
+				PRODUCT_NAME = PlusMeDemoTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlusMeDemo.app/PlusMeDemo";
 			};
 			name = Debug;
 		};
@@ -424,18 +425,19 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = MyFakePlusMeAppTests/Info.plist;
+				INFOPLIST_FILE = PlusMeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFakePlusMeApp.app/MyFakePlusMeApp";
+				PRODUCT_NAME = PlusMeDemoTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlusMeDemo.app/PlusMeDemo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2A95A4A21B6DDC040041FCD3 /* Build configuration list for PBXProject "MyFakePlusMeApp" */ = {
+		2A95A4A21B6DDC040041FCD3 /* Build configuration list for PBXProject "PlusMeDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A95A4C41B6DDC040041FCD3 /* Debug */,
@@ -444,7 +446,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A95A4C61B6DDC040041FCD3 /* Build configuration list for PBXNativeTarget "MyFakePlusMeApp" */ = {
+		2A95A4C61B6DDC040041FCD3 /* Build configuration list for PBXNativeTarget "PlusMeDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A95A4C71B6DDC040041FCD3 /* Debug */,
@@ -453,7 +455,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A95A4C91B6DDC040041FCD3 /* Build configuration list for PBXNativeTarget "MyFakePlusMeAppTests" */ = {
+		2A95A4C91B6DDC040041FCD3 /* Build configuration list for PBXNativeTarget "PlusMeDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A95A4CA1B6DDC040041FCD3 /* Debug */,
