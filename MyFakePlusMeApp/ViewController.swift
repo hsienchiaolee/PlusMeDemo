@@ -2,9 +2,9 @@ import UIKit
 import PlusMe
 
 class ViewController: UIViewController {
-    var plusMeAuthenticator: PlusMeAuthenticator? = nil
+    var authenticator: Authenticator? = nil
     var deviceIdentifier: String = UIDevice.currentDevice().identifierForVendor.UUIDString
-    let appBundle: String = "io.PlusMe.PlusMe"
+    let appBundle: String = "io.."
     var nearbyDevices: Array<String> = []
     
     @IBOutlet weak var actionButton: UIButton!
@@ -12,20 +12,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        plusMeAuthenticator = PlusMeAuthenticator(delegate: self)
+        authenticator = Authenticator(delegate: self)
     }
     
     override func viewDidAppear(animated: Bool) {
         if (NSUserDefaults.standardUserDefaults().boolForKey("hasRegisteredDevice")) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
-                self.plusMeAuthenticator?.login(self.appBundle, deviceIdentifier: self.deviceIdentifier)
+                self.authenticator?.login(self.appBundle, deviceIdentifier: self.deviceIdentifier)
             })
             
         }
     }
     
     @IBAction func didTapActionButton(sender: AnyObject) {
-        plusMeAuthenticator?.startDiscoveringDevices()
+        authenticator?.startDiscoveringDevices()
     }
     
     @IBAction func didTapResetButton(sender: AnyObject) {
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: PlusMeAuthenticatorDelegate {
+extension ViewController: AuthenticatorDelegate {
     func authenticatorDidDiscoverDevice(deviceIdentifier: String) {
         nearbyDevices.append(deviceIdentifier)
         tableView.reloadData()
@@ -84,7 +84,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let bluetoothDeviceIdentifier = nearbyDevices[indexPath.row]
-        plusMeAuthenticator?.register(appBundle, deviceIdentifier: deviceIdentifier, bluetoothDeviceIdentifier: bluetoothDeviceIdentifier)
+        authenticator?.register(appBundle, deviceIdentifier: deviceIdentifier, bluetoothDeviceIdentifier: bluetoothDeviceIdentifier)
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
 }
