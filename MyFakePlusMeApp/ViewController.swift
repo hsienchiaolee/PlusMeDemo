@@ -5,7 +5,7 @@ class ViewController: UIViewController {
     var authenticator: Authenticator? = nil
     var deviceIdentifier: String = UIDevice.currentDevice().identifierForVendor.UUIDString
     let appBundle: String = "io.."
-    var nearbyDevices: Array<String> = []
+    var nearbyDevices: [BluetoothDevice] = []
     
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -38,8 +38,8 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: AuthenticatorDelegate {
-    func authenticatorDidDiscoverDevice(deviceIdentifier: String) {
-        nearbyDevices.append(deviceIdentifier)
+    func authenticatorDidDiscoverDevice(device: BluetoothDevice) {
+        nearbyDevices.append(device)
         tableView.reloadData()
     }
     
@@ -78,13 +78,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let kCellIdentifier = "cellIdentifier"
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel?.text = nearbyDevices[indexPath.row]
+        let device = nearbyDevices[indexPath.row]
+        cell.textLabel?.text = device.name
+        cell.detailTextLabel?.text = device.identifier
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let bluetoothDeviceIdentifier = nearbyDevices[indexPath.row]
-        authenticator?.register(appBundle, deviceIdentifier: deviceIdentifier, bluetoothDeviceIdentifier: bluetoothDeviceIdentifier)
+        let device = nearbyDevices[indexPath.row]
+        authenticator?.register(appBundle, deviceIdentifier: deviceIdentifier, bluetoothDeviceIdentifier: device.identifier)
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
 }
