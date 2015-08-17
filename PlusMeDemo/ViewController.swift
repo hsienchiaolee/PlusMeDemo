@@ -38,8 +38,10 @@ class ViewController: UIViewController {
 
 extension ViewController: AuthenticatorDelegate {
   func authenticatorDidDiscoverDevice(device: BluetoothDevice) {
-    nearbyDevices.append(device)
-    tableView.reloadData()
+    if (!contains(nearbyDevices, device)) {
+      nearbyDevices.append(device)
+      tableView.reloadData()
+    }
   }
   
   func didRegisterBluetoothDevice(identifier: String) {

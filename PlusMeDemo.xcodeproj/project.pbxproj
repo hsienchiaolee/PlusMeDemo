@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A01C6781B7B2F1800A797E3 /* PlusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A01C6771B7B2F1800A797E3 /* PlusMe.framework */; };
-		2A01C6791B7B2F2100A797E3 /* PlusMe.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A01C6771B7B2F1800A797E3 /* PlusMe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A32AC1A1B8279350027EAE8 /* PlusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A32AC191B8279350027EAE8 /* PlusMe.framework */; };
+		2A32AC1B1B8279400027EAE8 /* PlusMe.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A32AC191B8279350027EAE8 /* PlusMe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A95A4AD1B6DDC040041FCD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A4AC1B6DDC040041FCD3 /* AppDelegate.swift */; };
 		2A95A4AF1B6DDC040041FCD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A4AE1B6DDC040041FCD3 /* ViewController.swift */; };
 		2A95A4B21B6DDC040041FCD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A4B01B6DDC040041FCD3 /* Main.storyboard */; };
@@ -35,14 +35,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2A01C6791B7B2F2100A797E3 /* PlusMe.framework in CopyFiles */,
+				2A32AC1B1B8279400027EAE8 /* PlusMe.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2A01C6771B7B2F1800A797E3 /* PlusMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlusMe.framework; sourceTree = "<group>"; };
+		2A32AC191B8279350027EAE8 /* PlusMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlusMe.framework; sourceTree = "<group>"; };
 		2A95A4A71B6DDC040041FCD3 /* PlusMeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlusMeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A95A4AB1B6DDC040041FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		2A95A4AC1B6DDC040041FCD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A01C6781B7B2F1800A797E3 /* PlusMe.framework in Frameworks */,
+				2A32AC1A1B8279350027EAE8 /* PlusMe.framework in Frameworks */,
 				2AB5FCF91B6EFAE000537C20 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +136,7 @@
 		2A95A4CC1B6DDC200041FCD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2A01C6771B7B2F1800A797E3 /* PlusMe.framework */,
+				2A32AC191B8279350027EAE8 /* PlusMe.framework */,
 				2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */,
 			);
 			name = Frameworks;
