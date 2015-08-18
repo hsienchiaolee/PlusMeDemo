@@ -11,9 +11,13 @@ class ViewController: UIViewController {
   @IBOutlet weak var registerButton: UIButton!
   @IBOutlet weak var loginButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    loadingIndicator.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.6)
+    
     authenticator = Authenticator(delegate: self)
     if (NSUserDefaults.standardUserDefaults().boolForKey("hasRegisteredDevice")) {
       loginButton.enabled = true
@@ -25,6 +29,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func didTapLoginButton(sender: AnyObject) {
+    loadingIndicator.startAnimating()
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
       self.authenticator?.login(self.appBundle, deviceIdentifier: self.deviceIdentifier)
     })
@@ -68,6 +73,7 @@ extension ViewController: AuthenticatorDelegate {
   func didLoginWithBluetoothDevice(device: BluetoothDevice) {
     loggedInDevice = device
     self.performSegueWithIdentifier("showLoggedInView", sender: self)
+    loadingIndicator.stopAnimating()
   }
   
   func didFailedToLoginWithError(error: NSError?) {

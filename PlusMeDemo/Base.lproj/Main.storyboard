@@ -74,16 +74,22 @@
                                     <action selector="didTapResetButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ut6-Rb-s7d"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="0Pr-Vw-5Sp">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gpo-EU-8CD" firstAttribute="leading" secondItem="NfY-it-HYj" secondAttribute="trailing" constant="8" id="13z-wj-XLK"/>
                             <constraint firstItem="NfY-it-HYj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="5Ao-Nm-wfi"/>
                             <constraint firstItem="TgG-DU-bbH" firstAttribute="width" secondItem="gpo-EU-8CD" secondAttribute="width" id="5O5-ry-3aI"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0Pr-Vw-5Sp" secondAttribute="bottom" id="7J5-qT-CzU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TgG-DU-bbH" secondAttribute="trailing" constant="8" id="AQA-1h-pq0"/>
                             <constraint firstItem="NfY-it-HYj" firstAttribute="centerY" secondItem="gpo-EU-8CD" secondAttribute="centerY" id="BZM-ey-9oJ"/>
                             <constraint firstItem="NfY-it-HYj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="CWo-iI-yeP"/>
                             <constraint firstItem="TgG-DU-bbH" firstAttribute="leading" secondItem="gpo-EU-8CD" secondAttribute="trailing" constant="8" id="F8m-s4-iax"/>
+                            <constraint firstItem="0Pr-Vw-5Sp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Fxr-v1-gxh"/>
+                            <constraint firstAttribute="trailing" secondItem="0Pr-Vw-5Sp" secondAttribute="trailing" id="NSK-H2-rPr"/>
                             <constraint firstItem="TgG-DU-bbH" firstAttribute="leading" secondItem="NfY-it-HYj" secondAttribute="trailing" constant="8" id="Or1-ws-p5q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Q8y-pf-4cS" secondAttribute="trailing" id="Tjw-0Z-KSc"/>
                             <constraint firstItem="NfY-it-HYj" firstAttribute="width" secondItem="gpo-EU-8CD" secondAttribute="width" id="UP6-EJ-P2H"/>
@@ -93,6 +99,7 @@
                             <constraint firstItem="TgG-DU-bbH" firstAttribute="width" secondItem="NfY-it-HYj" secondAttribute="width" id="hXs-2v-oBR"/>
                             <constraint firstItem="TgG-DU-bbH" firstAttribute="leading" secondItem="NfY-it-HYj" secondAttribute="trailing" constant="8" id="nSu-dG-7hy"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Q8y-pf-4cS" secondAttribute="bottom" id="qy9-RC-BDM"/>
+                            <constraint firstItem="0Pr-Vw-5Sp" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="z0d-72-90G"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -103,6 +110,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="loadingIndicator" destination="0Pr-Vw-5Sp" id="Lum-t5-1Mo"/>
                         <outlet property="loginButton" destination="gpo-EU-8CD" id="EOh-9Q-ktb"/>
                         <outlet property="registerButton" destination="NfY-it-HYj" id="ye8-lK-gK1"/>
                         <outlet property="tableView" destination="Q8y-pf-4cS" id="yav-oI-Zap"/>
