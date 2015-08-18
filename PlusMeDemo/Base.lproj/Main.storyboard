@@ -106,11 +106,66 @@
                         <outlet property="loginButton" destination="gpo-EU-8CD" id="EOh-9Q-ktb"/>
                         <outlet property="registerButton" destination="NfY-it-HYj" id="ye8-lK-gK1"/>
                         <outlet property="tableView" destination="Q8y-pf-4cS" id="yav-oI-Zap"/>
+                        <segue destination="R7M-dn-bNh" kind="show" identifier="showLoggedInView" id="84b-nu-BMf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="787" y="533"/>
+            <point key="canvasLocation" x="654" y="533"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="Dpi-9T-Kiu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5p-r4-NMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="R7M-dn-bNh" customClass="WelcomeViewController" customModule="PlusMeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="emB-Xm-V9E"/>
+                        <viewControllerLayoutGuide type="bottom" id="54T-X6-8er"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="axD-u9-FHc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBh-Jw-ZoI">
+                                <rect key="frame" x="36" y="80" width="528" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in using: device" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8T-3J-6e4">
+                                <rect key="frame" x="36" y="127" width="528" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UBh-Jw-ZoI" secondAttribute="trailing" constant="20" id="8eO-2f-PEp"/>
+                            <constraint firstItem="z8T-3J-6e4" firstAttribute="top" secondItem="emB-Xm-V9E" secondAttribute="bottom" constant="107" id="BUO-u6-tQW"/>
+                            <constraint firstItem="UBh-Jw-ZoI" firstAttribute="leading" secondItem="axD-u9-FHc" secondAttribute="leadingMargin" constant="20" id="IlS-w0-myP"/>
+                            <constraint firstItem="z8T-3J-6e4" firstAttribute="leading" secondItem="UBh-Jw-ZoI" secondAttribute="leading" id="W6p-n4-BGD"/>
+                            <constraint firstItem="UBh-Jw-ZoI" firstAttribute="top" secondItem="emB-Xm-V9E" secondAttribute="bottom" constant="60" id="XO6-2B-Qds"/>
+                            <constraint firstItem="z8T-3J-6e4" firstAttribute="top" secondItem="UBh-Jw-ZoI" secondAttribute="bottom" constant="8" id="dEn-43-hMY"/>
+                            <constraint firstItem="z8T-3J-6e4" firstAttribute="trailing" secondItem="UBh-Jw-ZoI" secondAttribute="trailing" id="lox-Qw-bkX"/>
+                            <constraint firstItem="z8T-3J-6e4" firstAttribute="leading" secondItem="axD-u9-FHc" secondAttribute="leadingMargin" constant="263" id="p2k-Tj-Q2z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z8T-3J-6e4" secondAttribute="trailing" constant="263" id="xXG-Mv-fPb"/>
+                            <constraint firstItem="54T-X6-8er" firstAttribute="top" relation="greaterThanOrEqual" secondItem="z8T-3J-6e4" secondAttribute="bottom" id="xvm-A9-poy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BUO-u6-tQW"/>
+                                <exclude reference="p2k-Tj-Q2z"/>
+                                <exclude reference="xXG-Mv-fPb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="deviceLabel" destination="z8T-3J-6e4" id="LK9-fy-B7Y"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1448" y="533"/>
         </scene>
     </scenes>
 </document>

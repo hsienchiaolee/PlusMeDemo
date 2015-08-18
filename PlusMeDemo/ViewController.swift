@@ -6,6 +6,7 @@ class ViewController: UIViewController {
   var deviceIdentifier: String = UIDevice.currentDevice().identifierForVendor.UUIDString
   let appBundle: String = "io.."
   var nearbyDevices: [BluetoothDevice] = []
+  var loggedInDevice: BluetoothDevice!
   
   @IBOutlet weak var registerButton: UIButton!
   @IBOutlet weak var loginButton: UIButton!
@@ -36,6 +37,13 @@ class ViewController: UIViewController {
   func showAlert(title: String, message: String?) {
     UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "Okay").show()
   }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "showLoggedInView" {
+      let welcomeViewController: WelcomeViewController = segue.destinationViewController as! WelcomeViewController
+      welcomeViewController.device = loggedInDevice
+    }
+  }
 }
 
 extension ViewController: AuthenticatorDelegate {
@@ -46,27 +54,28 @@ extension ViewController: AuthenticatorDelegate {
     }
   }
   
-  func didRegisterBluetoothDevice(identifier: String) {
+  func didRegisterBluetoothDevice(device: BluetoothDevice) {
     NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasRegisteredDevice")
     NSUserDefaults.standardUserDefaults().synchronize()
-    showAlert("Register Success", message: identifier)
-    loginButton.enabled = true;
+    showAlert("Register Success", message: device.name)
+    loginButton.enabled = true
   }
   
   func didFailedToRegisterWithError(error: NSError?) {
     showAlert("Register Failed", message: error?.description)
   }
   
-  func didLoginWithBluetoothDevice(identifier: String) {
-    showAlert("Login Success", message: identifier)
+  func didLoginWithBluetoothDevice(device: BluetoothDevice) {
+    loggedInDevice = device
+    self.performSegueWithIdentifier("showLoggedInView", sender: self)
   }
   
   func didFailedToLoginWithError(error: NSError?) {
     showAlert("Login Failed", message: error?.description)
   }
   
-  func didUnregisterBluetoothDevice(identifier: String) {
-    showAlert("Unregister Success", message: identifier)
+  func didUnregisterBluetoothDevice(device: BluetoothDevice) {
+    showAlert("Unregister Success", message: device.name)
   }
   
   func didFailedToUnregisterWithError(error: NSError?) {
@@ -90,7 +99,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let device = nearbyDevices[indexPath.row]
-    authenticator?.register(appBundle, deviceIdentifier: deviceIdentifier, bluetoothDeviceIdentifier: device.identifier)
+    authenticator?.register(appBundle, deviceIdentifier: deviceIdentifier, device: device)
     tableView.deselectRowAtIndexPath(indexPath, animated: false)
   }
 }
