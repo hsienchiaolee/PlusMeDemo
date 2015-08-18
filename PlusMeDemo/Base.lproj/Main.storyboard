@@ -29,13 +29,13 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SZk-sm-7jF">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JvO-ea-D8K">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -47,8 +47,26 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="fya-f3-qoa"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfY-it-HYj">
+                                <rect key="frame" x="24" y="28" width="179" height="30"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapRegisterButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="umk-ku-mIf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpo-EU-8CD" userLabel="Login">
+                                <rect key="frame" x="211" y="28" width="178" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapLoginButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hEF-Q6-RLd"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgG-DU-bbH">
-                                <rect key="frame" x="304" y="28" width="272" height="30"/>
+                                <rect key="frame" x="397" y="28" width="179" height="30"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -56,23 +74,19 @@
                                     <action selector="didTapResetButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ut6-Rb-s7d"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfY-it-HYj">
-                                <rect key="frame" x="24" y="28" width="272" height="30"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapActionButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e6V-VP-dbY"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gpo-EU-8CD" firstAttribute="leading" secondItem="NfY-it-HYj" secondAttribute="trailing" constant="8" id="13z-wj-XLK"/>
                             <constraint firstItem="NfY-it-HYj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="5Ao-Nm-wfi"/>
+                            <constraint firstItem="TgG-DU-bbH" firstAttribute="width" secondItem="gpo-EU-8CD" secondAttribute="width" id="5O5-ry-3aI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TgG-DU-bbH" secondAttribute="trailing" constant="8" id="AQA-1h-pq0"/>
+                            <constraint firstItem="NfY-it-HYj" firstAttribute="centerY" secondItem="gpo-EU-8CD" secondAttribute="centerY" id="BZM-ey-9oJ"/>
                             <constraint firstItem="NfY-it-HYj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="CWo-iI-yeP"/>
+                            <constraint firstItem="TgG-DU-bbH" firstAttribute="leading" secondItem="gpo-EU-8CD" secondAttribute="trailing" constant="8" id="F8m-s4-iax"/>
                             <constraint firstItem="TgG-DU-bbH" firstAttribute="leading" secondItem="NfY-it-HYj" secondAttribute="trailing" constant="8" id="Or1-ws-p5q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Q8y-pf-4cS" secondAttribute="trailing" id="Tjw-0Z-KSc"/>
+                            <constraint firstItem="NfY-it-HYj" firstAttribute="width" secondItem="gpo-EU-8CD" secondAttribute="width" id="UP6-EJ-P2H"/>
                             <constraint firstItem="Q8y-pf-4cS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ba3-a7-ly9"/>
                             <constraint firstItem="Q8y-pf-4cS" firstAttribute="top" secondItem="NfY-it-HYj" secondAttribute="bottom" constant="8" id="cgj-Yl-h0F"/>
                             <constraint firstItem="TgG-DU-bbH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="dva-yJ-whR"/>
@@ -82,12 +96,15 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Or1-ws-p5q"/>
+                                <exclude reference="hXs-2v-oBR"/>
                                 <exclude reference="nSu-dG-7hy"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="actionButton" destination="NfY-it-HYj" id="p95-dj-i2n"/>
+                        <outlet property="loginButton" destination="gpo-EU-8CD" id="EOh-9Q-ktb"/>
+                        <outlet property="registerButton" destination="NfY-it-HYj" id="ye8-lK-gK1"/>
                         <outlet property="tableView" destination="Q8y-pf-4cS" id="yav-oI-Zap"/>
                     </connections>
                 </viewController>

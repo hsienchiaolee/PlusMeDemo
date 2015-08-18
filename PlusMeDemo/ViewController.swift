@@ -7,24 +7,26 @@ class ViewController: UIViewController {
   let appBundle: String = "io.."
   var nearbyDevices: [BluetoothDevice] = []
   
-  @IBOutlet weak var actionButton: UIButton!
+  @IBOutlet weak var registerButton: UIButton!
+  @IBOutlet weak var loginButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     authenticator = Authenticator(delegate: self)
-  }
-  
-  override func viewDidAppear(animated: Bool) {
     if (NSUserDefaults.standardUserDefaults().boolForKey("hasRegisteredDevice")) {
-      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
-        self.authenticator?.login(self.appBundle, deviceIdentifier: self.deviceIdentifier)
-      })
+      loginButton.enabled = true
     }
   }
   
-  @IBAction func didTapActionButton(sender: AnyObject) {
+  @IBAction func didTapRegisterButton(sender: AnyObject) {
     authenticator?.startDiscoveringDevices()
+  }
+  
+  @IBAction func didTapLoginButton(sender: AnyObject) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+      self.authenticator?.login(self.appBundle, deviceIdentifier: self.deviceIdentifier)
+    })
   }
   
   @IBAction func didTapResetButton(sender: AnyObject) {
@@ -48,6 +50,7 @@ extension ViewController: AuthenticatorDelegate {
     NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasRegisteredDevice")
     NSUserDefaults.standardUserDefaults().synchronize()
     showAlert("Register Success", message: identifier)
+    loginButton.enabled = true;
   }
   
   func didFailedToRegisterWithError(error: NSError?) {
