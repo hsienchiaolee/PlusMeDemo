@@ -133,16 +133,91 @@
                     <connections>
                         <segue destination="UHR-nc-zVg" kind="relationship" relationship="viewControllers" id="hiQ-cj-8rP"/>
                         <segue destination="T9C-N1-ova" kind="relationship" relationship="viewControllers" id="Gfs-GN-7Yo"/>
+                        <segue destination="EK8-ey-lQi" kind="relationship" relationship="viewControllers" id="SM2-Aj-8uI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ll-YO-nG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="110" y="-422"/>
         </scene>
+        <!--Register-->
+        <scene sceneID="teJ-1u-7cp">
+            <objects>
+                <viewController title="Register" id="EK8-ey-lQi" customClass="DeviceListViewController" customModule="PlusMeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2zD-rV-xtL"/>
+                        <viewControllerLayoutGuide type="bottom" id="eAx-EP-cfV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q6S-Ah-oj3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="ylh-kO-sfi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emailCell" id="w1w-hA-IBE" userLabel="emailCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1w-hA-IBE" id="qZP-UX-W84">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@gmail.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxH-2P-wa0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cxH-2P-wa0" firstAttribute="top" secondItem="qZP-UX-W84" secondAttribute="top" id="1Fx-Iy-BOQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="cxH-2P-wa0" secondAttribute="bottom" id="LuJ-9n-B3H"/>
+                                                <constraint firstAttribute="trailing" secondItem="cxH-2P-wa0" secondAttribute="trailing" id="MCZ-u6-AWw"/>
+                                                <constraint firstItem="cxH-2P-wa0" firstAttribute="leading" secondItem="qZP-UX-W84" secondAttribute="leading" id="jUW-n5-kIP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" id="4Uo-u3-wVX">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Uo-u3-wVX" id="BYd-Bg-jmR">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="accessoryView" destination="6qJ-Wx-Ir5" id="5Te-Sg-K79"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EK8-ey-lQi" id="hDt-af-Fis"/>
+                                    <outlet property="delegate" destination="EK8-ey-lQi" id="KoO-xR-mBy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ylh-kO-sfi" firstAttribute="leading" secondItem="q6S-Ah-oj3" secondAttribute="leading" id="RtJ-yJ-qFx"/>
+                            <constraint firstItem="ylh-kO-sfi" firstAttribute="top" secondItem="q6S-Ah-oj3" secondAttribute="top" id="fpp-Td-Fxz"/>
+                            <constraint firstAttribute="trailing" secondItem="ylh-kO-sfi" secondAttribute="trailing" id="nsL-4e-dSO"/>
+                            <constraint firstAttribute="bottom" secondItem="ylh-kO-sfi" secondAttribute="bottom" id="sXV-Ca-OPF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="lES-lu-duT"/>
+                    <connections>
+                        <outlet property="tableView" destination="ylh-kO-sfi" id="jIa-1k-8lk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ux-Rj-KF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="6qJ-Wx-Ir5">
+                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </switch>
+            </objects>
+            <point key="canvasLocation" x="823" y="448"/>
+        </scene>
     </scenes>
     <resources>
         <image name="logged_in" width="100" height="100"/>
         <image name="login" width="25" height="25"/>
         <image name="register" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
     </resources>
 </document>
