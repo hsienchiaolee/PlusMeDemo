@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gH4-KZ-VqS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Register-->
@@ -75,7 +76,49 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </switch>
             </objects>
-            <point key="canvasLocation" x="892" y="-422"/>
+            <point key="canvasLocation" x="823" y="-970"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="2g8-sN-Gyb">
+            <objects>
+                <viewController id="T9C-N1-ova" customClass="LogInViewController" customModule="PlusMeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RZR-lz-cD2"/>
+                        <viewControllerLayoutGuide type="bottom" id="ClG-Kw-fHl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hTM-Ua-Ewz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logged_in" translatesAutoresizingMaskIntoConstraints="NO" id="R2p-PP-fQ8">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF6-rm-vdp">
+                                <rect key="frame" x="56" y="358" width="488" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ClG-Kw-fHl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uF6-rm-vdp" secondAttribute="bottom" id="9aP-lg-nRu"/>
+                            <constraint firstItem="uF6-rm-vdp" firstAttribute="top" secondItem="R2p-PP-fQ8" secondAttribute="bottom" constant="8" symbolic="YES" id="HmV-XW-hQq"/>
+                            <constraint firstAttribute="centerX" secondItem="R2p-PP-fQ8" secondAttribute="centerX" id="Pia-WA-TLd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uF6-rm-vdp" secondAttribute="trailing" constant="40" id="Vna-cm-igj"/>
+                            <constraint firstAttribute="centerY" secondItem="R2p-PP-fQ8" secondAttribute="centerY" id="etU-Jt-JaZ"/>
+                            <constraint firstItem="uF6-rm-vdp" firstAttribute="leading" secondItem="hTM-Ua-Ewz" secondAttribute="leadingMargin" constant="40" id="uq8-fP-BGz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Login" image="login" id="ZGb-4U-gEy"/>
+                    <connections>
+                        <outlet property="checkmarkImageView" destination="R2p-PP-fQ8" id="eKx-dv-gs8"/>
+                        <outlet property="statusLabel" destination="uF6-rm-vdp" id="25F-o7-V08"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A9d-BR-syF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="-281"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yI3-ql-V2C">
@@ -89,6 +132,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="UHR-nc-zVg" kind="relationship" relationship="viewControllers" id="hiQ-cj-8rP"/>
+                        <segue destination="T9C-N1-ova" kind="relationship" relationship="viewControllers" id="Gfs-GN-7Yo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ll-YO-nG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,4 +140,8 @@
             <point key="canvasLocation" x="110" y="-422"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logged_in" width="100" height="100"/>
+        <image name="login" width="25" height="25"/>
+    </resources>
 </document>
