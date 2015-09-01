@@ -65,7 +65,7 @@
                             <constraint firstAttribute="bottom" secondItem="8Rj-1r-v65" secondAttribute="bottom" id="yUj-Ra-fgH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Register" id="gYY-cf-Ik8"/>
+                    <tabBarItem key="tabBarItem" title="Register" image="register" id="gYY-cf-Ik8"/>
                     <connections>
                         <outlet property="tableView" destination="8Rj-1r-v65" id="aGx-tN-Gdo"/>
                     </connections>
@@ -143,5 +143,6 @@
     <resources>
         <image name="logged_in" width="100" height="100"/>
         <image name="login" width="25" height="25"/>
+        <image name="register" width="25" height="25"/>
     </resources>
 </document>
