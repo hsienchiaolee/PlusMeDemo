@@ -23,6 +23,11 @@ class DeviceListViewController: UIViewController {
     super.viewWillDisappear(animated)
     authenticator?.stopDiscoveringDevices()
   }
+  
+  // MARK: Private
+  func showAlert(title: String, message: String?) {
+    UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "Okay").show()
+  }
 }
 
 extension DeviceListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -76,11 +81,6 @@ extension DeviceListViewController: UITableViewDataSource, UITableViewDelegate {
       
       tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
-  }
-  
-  // MARK: Private
-  func showAlert(title: String, message: String?) {
-    UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "Okay").show()
   }
 }
 
