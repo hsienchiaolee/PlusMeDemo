@@ -82,6 +82,17 @@ extension DeviceListViewController: UITableViewDataSource, UITableViewDelegate {
       tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
   }
+  
+  func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return section == 0 ? nil : "OTHER DEVICES"
+  }
+  
+  func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    if self.title == "Register" {
+      return section == 0 ? "+ME lets you login without a password when this device is paired with another device. This app will automatically login whenever the paired devices are in  your possession with bluetooth turned on." : "Your device has not paired with these devices. use caution before connecting."
+    }
+    return nil
+  }
 }
 
 extension DeviceListViewController: AuthenticatorDelegate {
