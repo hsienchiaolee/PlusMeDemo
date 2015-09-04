@@ -16,6 +16,8 @@
 		2A95A4B71B6DDC040041FCD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A4B51B6DDC040041FCD3 /* LaunchScreen.xib */; };
 		2A95A4C31B6DDC040041FCD3 /* MyFakePlusMeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A4C21B6DDC040041FCD3 /* MyFakePlusMeAppTests.swift */; };
 		2AB5FCF91B6EFAE000537C20 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */; };
+		2ACA78E71B994D2500C744F8 /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACA78E61B994D2500C744F8 /* PureLayout.framework */; };
+		2ACA78E81B994D2800C744F8 /* PureLayout.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2ACA78E61B994D2500C744F8 /* PureLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AFE8A131B9561D500332F6A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE8A121B9561D500332F6A /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2A765A001B982206000D4BBC /* PlusMe.framework in CopyFiles */,
+				2ACA78E81B994D2800C744F8 /* PureLayout.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +58,7 @@
 		2A95A4C11B6DDC040041FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		2A95A4C21B6DDC040041FCD3 /* MyFakePlusMeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFakePlusMeAppTests.swift; sourceTree = "<group>"; };
 		2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		2ACA78E61B994D2500C744F8 /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
 		2AFE8A121B9561D500332F6A /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7659FF1B982203000D4BBC /* PlusMe.framework in Frameworks */,
+				2ACA78E71B994D2500C744F8 /* PureLayout.framework in Frameworks */,
 				2AB5FCF91B6EFAE000537C20 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +144,7 @@
 		2A95A4CC1B6DDC200041FCD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2ACA78E61B994D2500C744F8 /* PureLayout.framework */,
 				2A7659FE1B982203000D4BBC /* PlusMe.framework */,
 				2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */,
 			);
@@ -379,6 +385,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PlusMeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -394,6 +401,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PlusMeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
