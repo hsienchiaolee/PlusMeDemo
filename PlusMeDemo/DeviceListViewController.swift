@@ -12,6 +12,7 @@ class DeviceListViewController: UIViewController {
     super.viewDidLoad()
     
     authenticator = Authenticator(delegate: self)
+    tableView.registerClass(DeviceCell.self, forCellReuseIdentifier: "deviceCell")
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -50,13 +51,12 @@ extension DeviceListViewController: UITableViewDataSource, UITableViewDelegate {
       return tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
     } else {
       let kCellIdentifier = "deviceCell"
-      let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+      let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath: indexPath) as! DeviceCell
       
       var device: BluetoothDevice!
       if indexPath.section == 1 && authenticator.knownDevices.count > 0 {
         device = authenticator.knownDevices[indexPath.row]
-        let accessorySwitch = cell.viewWithTag(100) as! UISwitch
-        accessorySwitch.on = true
+        cell.connectedSwitch.on = true
       } else {
         device = authenticator.nearbyDevices[indexPath.row]
       }
@@ -79,14 +79,13 @@ extension DeviceListViewController: UITableViewDataSource, UITableViewDelegate {
         device = authenticator.nearbyDevices[indexPath.row]
       }
       
-      let cell = tableView.cellForRowAtIndexPath(indexPath)
-      let accessorySwitch = cell?.viewWithTag(100) as! UISwitch
-      accessorySwitch.setOn(!accessorySwitch.on, animated: true)
+      let cell = tableView.cellForRowAtIndexPath(indexPath) as! DeviceCell
+      cell.connectedSwitch.setOn(!cell.connectedSwitch.on, animated: true)
       
-      if accessorySwitch.on {
+      if cell.connectedSwitch.on {
         authenticator.register(appBundle, deviceIdentifier: deviceIdentifier, device: device) { (success, device, error) in
           if !success {
-            accessorySwitch.setOn(!accessorySwitch.on, animated: true)
+            cell.connectedSwitch.setOn(!cell.connectedSwitch.on, animated: true)
             self.showAlert("Register Failed", message: error?.description)
           }
           
@@ -94,7 +93,7 @@ extension DeviceListViewController: UITableViewDataSource, UITableViewDelegate {
       } else {
         authenticator.unregister(appBundle, deviceIdentifier: deviceIdentifier, device: device) { (success, device, error) in
           if !success {
-            accessorySwitch.setOn(!accessorySwitch.on, animated: true)
+            cell.connectedSwitch.setOn(!cell.connectedSwitch.on, animated: true)
             self.showAlert("Un-Register Failed", message: error?.description)
           }
         }

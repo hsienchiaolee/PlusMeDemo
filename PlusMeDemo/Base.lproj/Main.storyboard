@@ -40,21 +40,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" id="M1v-BH-13f">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M1v-BH-13f" id="a3J-jY-uho">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <switch opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yzd-is-qBa">
-                                                    <rect key="frame" x="535" y="7" width="51" height="31"/>
-                                                </switch>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="yzd-is-qBa" secondAttribute="trailing" constant="8" id="LTq-0p-aVA"/>
-                                                <constraint firstAttribute="centerY" secondItem="yzd-is-qBa" secondAttribute="centerY" id="dfE-TT-pIN"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </prototypes>
                                 <sections/>
                                 <connections>
@@ -174,21 +159,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="cxH-2P-wa0" secondAttribute="bottom" id="LuJ-9n-B3H"/>
                                                 <constraint firstAttribute="trailing" secondItem="cxH-2P-wa0" secondAttribute="trailing" id="MCZ-u6-AWw"/>
                                                 <constraint firstItem="cxH-2P-wa0" firstAttribute="leading" secondItem="qZP-UX-W84" secondAttribute="leading" id="jUW-n5-kIP"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" id="4Uo-u3-wVX">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Uo-u3-wVX" id="BYd-Bg-jmR">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <switch opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="usa-Fk-EVs">
-                                                    <rect key="frame" x="535" y="7" width="51" height="31"/>
-                                                </switch>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="usa-Fk-EVs" secondAttribute="trailing" constant="8" id="WGY-v8-3ZD"/>
-                                                <constraint firstAttribute="centerY" secondItem="usa-Fk-EVs" secondAttribute="centerY" id="diK-1h-sqj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
