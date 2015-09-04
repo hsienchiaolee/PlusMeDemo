@@ -83,8 +83,25 @@ typedef struct _NSZone NSZone;
 #  define SWIFT_NULLABILITY(X)
 #endif
 #if defined(__has_feature) && __has_feature(modules)
+@import ObjectiveC;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+@class NSCoder;
+
+SWIFT_CLASS("_TtC6PlusMe15BluetoothDevice")
+@interface BluetoothDevice : NSObject <NSCoding>
+@property (nonatomic, copy) NSString * __nonnull name;
+@property (nonatomic, copy) NSString * __nonnull identifier;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder;
+- (void)encodeWithCoder:(NSCoder * __nonnull)aCoder;
+@property (nonatomic, readonly, copy, getter=debugDescription) NSString * __nonnull debugDescription;
+@end
+
+
+@interface BluetoothDevice (SWIFT_EXTENSION(PlusMe))
+@end
+
 #pragma clang diagnostic pop

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A2872051B95743E00130C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2872031B95743E00130C7F /* Main.storyboard */; };
+		2A7659FF1B982203000D4BBC /* PlusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7659FE1B982203000D4BBC /* PlusMe.framework */; };
+		2A765A001B982206000D4BBC /* PlusMe.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A7659FE1B982203000D4BBC /* PlusMe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A8761701B8ED49700267BB1 /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87616F1B8ED49700267BB1 /* DeviceListViewController.swift */; };
 		2A95A4AD1B6DDC040041FCD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A4AC1B6DDC040041FCD3 /* AppDelegate.swift */; };
 		2A95A4B41B6DDC040041FCD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A4B31B6DDC040041FCD3 /* Images.xcassets */; };
@@ -15,8 +17,6 @@
 		2A95A4C31B6DDC040041FCD3 /* MyFakePlusMeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A4C21B6DDC040041FCD3 /* MyFakePlusMeAppTests.swift */; };
 		2AB5FCF91B6EFAE000537C20 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */; };
 		2AFE8A131B9561D500332F6A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE8A121B9561D500332F6A /* LogInViewController.swift */; };
-		2AFE8A171B9571AA00332F6A /* PlusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFE8A161B9571AA00332F6A /* PlusMe.framework */; };
-		2AFE8A181B9571AD00332F6A /* PlusMe.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2AFE8A161B9571AA00332F6A /* PlusMe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2AFE8A181B9571AD00332F6A /* PlusMe.framework in CopyFiles */,
+				2A765A001B982206000D4BBC /* PlusMe.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		2A2872041B95743E00130C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A7659FE1B982203000D4BBC /* PlusMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlusMe.framework; sourceTree = "<group>"; };
 		2A87616F1B8ED49700267BB1 /* DeviceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
 		2A95A4A71B6DDC040041FCD3 /* PlusMeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlusMeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A95A4AB1B6DDC040041FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		2A95A4C21B6DDC040041FCD3 /* MyFakePlusMeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFakePlusMeAppTests.swift; sourceTree = "<group>"; };
 		2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		2AFE8A121B9561D500332F6A /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		2AFE8A161B9571AA00332F6A /* PlusMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlusMe.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AFE8A171B9571AA00332F6A /* PlusMe.framework in Frameworks */,
+				2A7659FF1B982203000D4BBC /* PlusMe.framework in Frameworks */,
 				2AB5FCF91B6EFAE000537C20 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +139,7 @@
 		2A95A4CC1B6DDC200041FCD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2AFE8A161B9571AA00332F6A /* PlusMe.framework */,
+				2A7659FE1B982203000D4BBC /* PlusMe.framework */,
 				2AB5FCF81B6EFAE000537C20 /* CoreBluetooth.framework */,
 			);
 			name = Frameworks;

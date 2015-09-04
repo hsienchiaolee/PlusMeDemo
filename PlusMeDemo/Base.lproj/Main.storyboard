@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gH4-KZ-VqS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gH4-KZ-VqS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -44,10 +44,16 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M1v-BH-13f" id="a3J-jY-uho">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yzd-is-qBa">
+                                                    <rect key="frame" x="535" y="7" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yzd-is-qBa" secondAttribute="trailing" constant="8" id="LTq-0p-aVA"/>
+                                                <constraint firstAttribute="centerY" secondItem="yzd-is-qBa" secondAttribute="centerY" id="dfE-TT-pIN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="accessoryView" destination="h37-tf-Dbb" id="igC-5H-K3e"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -67,14 +73,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Register" image="register" id="gYY-cf-Ik8"/>
                     <connections>
-                        <outlet property="tableView" destination="8Rj-1r-v65" id="aGx-tN-Gdo"/>
+                        <outlet property="tableView" destination="8Rj-1r-v65" id="UxX-9o-oA0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jW-SP-591" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="h37-tf-Dbb">
-                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </switch>
             </objects>
             <point key="canvasLocation" x="823" y="-970"/>
         </scene>
@@ -133,7 +135,7 @@
                     <connections>
                         <segue destination="UHR-nc-zVg" kind="relationship" relationship="viewControllers" id="hiQ-cj-8rP"/>
                         <segue destination="T9C-N1-ova" kind="relationship" relationship="viewControllers" id="Gfs-GN-7Yo"/>
-                        <segue destination="EK8-ey-lQi" kind="relationship" relationship="viewControllers" id="SM2-Aj-8uI"/>
+                        <segue destination="EK8-ey-lQi" kind="relationship" relationship="viewControllers" id="0ti-VI-r5X"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ll-YO-nG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -179,10 +181,16 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Uo-u3-wVX" id="BYd-Bg-jmR">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="usa-Fk-EVs">
+                                                    <rect key="frame" x="535" y="7" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="usa-Fk-EVs" secondAttribute="trailing" constant="8" id="WGY-v8-3ZD"/>
+                                                <constraint firstAttribute="centerY" secondItem="usa-Fk-EVs" secondAttribute="centerY" id="diK-1h-sqj"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="accessoryView" destination="6qJ-Wx-Ir5" id="5Te-Sg-K79"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -206,10 +214,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ux-Rj-KF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="6qJ-Wx-Ir5">
-                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </switch>
             </objects>
             <point key="canvasLocation" x="823" y="448"/>
         </scene>
