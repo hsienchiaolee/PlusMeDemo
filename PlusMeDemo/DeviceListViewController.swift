@@ -2,7 +2,7 @@ import UIKit
 import PlusMe
 
 class DeviceListViewController: UIViewController {
-  let deviceIdentifier: String = UIDevice.currentDevice().identifierForVendor.UUIDString
+  let deviceIdentifier: String = UIDevice.currentDevice().identifierForVendor!.UUIDString
   let appBundle: String = "io.plusmedemo"
   
   @IBOutlet weak var tableView: UITableView!
@@ -48,7 +48,7 @@ extension DeviceListViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     if indexPath.section == 0 {
       let kCellIdentifier = "emailCell"
-      return tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+      return tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath: indexPath) 
     } else {
       let kCellIdentifier = "deviceCell"
       let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath: indexPath) as! DeviceCell

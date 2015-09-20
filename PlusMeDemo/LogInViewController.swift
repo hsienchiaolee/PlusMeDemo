@@ -2,7 +2,7 @@ import UIKit
 import PlusMe
 
 class LogInViewController: UIViewController {
-  let deviceIdentifier: String = UIDevice.currentDevice().identifierForVendor.UUIDString
+  let deviceIdentifier: String = UIDevice.currentDevice().identifierForVendor!.UUIDString
   let appBundle: String = "io.plusmedemo"
   
   @IBOutlet weak var checkmarkImageView: UIImageView!

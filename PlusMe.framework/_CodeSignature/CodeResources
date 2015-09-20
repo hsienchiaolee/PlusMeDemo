@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/PlusMe-Swift.h</key>
 		<data>
-		IUAyUrfW8lb/RzCS9yLePQXdnUs=
+		6TlqkHaV1Abcxlu8Bojxdqc8xh4=
 		</data>
 		<key>Headers/PlusMe.h</key>
 		<data>
@@ -18,23 +18,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		m0UH0H3rqLnMb9xR72LfY57xk98=
+		8h+cZEv/J4cagZ2LdDZ7Hh4LRrU=
 		</data>
 		<key>Modules/PlusMe.swiftmodule/arm.swiftdoc</key>
 		<data>
-		y4bVLGoeUHdvqRZzNxDyOON7ieA=
+		G40ZKxZeGbDiufsVP/4VgPLgqGY=
 		</data>
 		<key>Modules/PlusMe.swiftmodule/arm.swiftmodule</key>
 		<data>
-		g8BnKGZBRX47YAj05P4w/G2PP74=
+		4hD07IiRVWugZB8FLCl+fN+BPNs=
 		</data>
 		<key>Modules/PlusMe.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		hyWZgPQa8y5qz+0rsZMp79qiNlk=
+		Fq4/GBaJtuC5ZnCk+gF/L2KS1cY=
 		</data>
 		<key>Modules/PlusMe.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		gZRs7r3Lhti/2YK5o3ZTRJI2sZk=
+		Wu9oJKUzRayBC3gUN6j/m1iKOcE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -45,7 +45,7 @@
 	<dict>
 		<key>Headers/PlusMe-Swift.h</key>
 		<data>
-		IUAyUrfW8lb/RzCS9yLePQXdnUs=
+		6TlqkHaV1Abcxlu8Bojxdqc8xh4=
 		</data>
 		<key>Headers/PlusMe.h</key>
 		<data>
@@ -57,19 +57,19 @@
 		</data>
 		<key>Modules/PlusMe.swiftmodule/arm.swiftdoc</key>
 		<data>
-		y4bVLGoeUHdvqRZzNxDyOON7ieA=
+		G40ZKxZeGbDiufsVP/4VgPLgqGY=
 		</data>
 		<key>Modules/PlusMe.swiftmodule/arm.swiftmodule</key>
 		<data>
-		g8BnKGZBRX47YAj05P4w/G2PP74=
+		4hD07IiRVWugZB8FLCl+fN+BPNs=
 		</data>
 		<key>Modules/PlusMe.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		hyWZgPQa8y5qz+0rsZMp79qiNlk=
+		Fq4/GBaJtuC5ZnCk+gF/L2KS1cY=
 		</data>
 		<key>Modules/PlusMe.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		gZRs7r3Lhti/2YK5o3ZTRJI2sZk=
+		Wu9oJKUzRayBC3gUN6j/m1iKOcE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
