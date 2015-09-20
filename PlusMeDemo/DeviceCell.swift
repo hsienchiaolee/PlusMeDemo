@@ -8,6 +8,7 @@ class DeviceCell: UITableViewCell {
     super.init(style: .Subtitle, reuseIdentifier: reuseIdentifier)
     
     connectedSwitch = UISwitch()
+    connectedSwitch.userInteractionEnabled = false;
     self.contentView.addSubview(connectedSwitch)
     connectedSwitch.autoAlignAxisToSuperviewAxis(.Horizontal)
     connectedSwitch.autoPinEdgeToSuperviewEdge(.Trailing, withInset: 8)

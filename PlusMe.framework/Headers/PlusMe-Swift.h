@@ -101,6 +101,7 @@ SWIFT_CLASS("_TtC6PlusMe15BluetoothDevice")
 - (nonnull instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder;
 - (void)encodeWithCoder:(NSCoder * __nonnull)aCoder;
 @property (nonatomic, readonly, copy) NSString * __nonnull debugDescription;
+- (BOOL)isEqual:(id __nullable)object;
 @end
 
 #pragma clang diagnostic pop
