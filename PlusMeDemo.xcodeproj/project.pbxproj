@@ -200,7 +200,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Kai Lee";
 				TargetAttributes = {
 					2A95A4A61B6DDC040041FCD3 = {
@@ -322,6 +322,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -393,6 +394,7 @@
 				);
 				INFOPLIST_FILE = PlusMeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.PlusMe.Fake$(PRODUCT_NAME:rfc1034identifier)App";
 				PRODUCT_NAME = PlusMeDemo;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PlusMe.framework/Headers/**";
 			};
@@ -409,6 +411,7 @@
 				);
 				INFOPLIST_FILE = PlusMeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.PlusMe.Fake$(PRODUCT_NAME:rfc1034identifier)App";
 				PRODUCT_NAME = PlusMeDemo;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PlusMe.framework/Headers/**";
 			};
@@ -429,6 +432,7 @@
 				);
 				INFOPLIST_FILE = PlusMeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.PlusMe.Fake$(PRODUCT_NAME:rfc1034identifier)App";
 				PRODUCT_NAME = PlusMeDemoTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlusMeDemo.app/PlusMeDemo";
 			};
@@ -445,6 +449,7 @@
 				);
 				INFOPLIST_FILE = PlusMeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.PlusMe.Fake$(PRODUCT_NAME:rfc1034identifier)App";
 				PRODUCT_NAME = PlusMeDemoTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlusMeDemo.app/PlusMeDemo";
 			};
