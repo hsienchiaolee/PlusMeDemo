@@ -23,10 +23,10 @@
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emailCell" id="MYK-v7-eaH" userLabel="emailCell">
-                                        <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MYK-v7-eaH" id="5e0-KX-I5s">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@gmail.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfv-6U-TnN">
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jW-SP-591" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="-970"/>
+            <point key="canvasLocation" x="823" y="-744"/>
         </scene>
         <!--Login-->
         <scene sceneID="2g8-sN-Gyb">
@@ -83,8 +83,8 @@
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logged_in" translatesAutoresizingMaskIntoConstraints="NO" id="R2p-PP-fQ8">
                                 <rect key="frame" x="250" y="250" width="100" height="100"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF6-rm-vdp">
-                                <rect key="frame" x="56" y="358" width="488" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF6-rm-vdp">
+                                <rect key="frame" x="60" y="358" width="480" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9d-BR-syF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="-281"/>
+            <point key="canvasLocation" x="823" y="-71"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yI3-ql-V2C">
@@ -123,80 +123,16 @@
                     <connections>
                         <segue destination="UHR-nc-zVg" kind="relationship" relationship="viewControllers" id="hiQ-cj-8rP"/>
                         <segue destination="T9C-N1-ova" kind="relationship" relationship="viewControllers" id="Gfs-GN-7Yo"/>
-                        <segue destination="EK8-ey-lQi" kind="relationship" relationship="viewControllers" id="0ti-VI-r5X"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ll-YO-nG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="110" y="-422"/>
         </scene>
-        <!--Register-->
-        <scene sceneID="teJ-1u-7cp">
-            <objects>
-                <viewController title="Register" id="EK8-ey-lQi" customClass="DeviceListViewController" customModule="PlusMeDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2zD-rV-xtL"/>
-                        <viewControllerLayoutGuide type="bottom" id="eAx-EP-cfV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="q6S-Ah-oj3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="ylh-kO-sfi">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emailCell" id="w1w-hA-IBE" userLabel="emailCell">
-                                        <rect key="frame" x="0.0" y="50" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1w-hA-IBE" id="qZP-UX-W84">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@gmail.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxH-2P-wa0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="cxH-2P-wa0" firstAttribute="top" secondItem="qZP-UX-W84" secondAttribute="top" id="1Fx-Iy-BOQ"/>
-                                                <constraint firstAttribute="bottom" secondItem="cxH-2P-wa0" secondAttribute="bottom" id="LuJ-9n-B3H"/>
-                                                <constraint firstAttribute="trailing" secondItem="cxH-2P-wa0" secondAttribute="trailing" id="MCZ-u6-AWw"/>
-                                                <constraint firstItem="cxH-2P-wa0" firstAttribute="leading" secondItem="qZP-UX-W84" secondAttribute="leading" id="jUW-n5-kIP"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                                <connections>
-                                    <outlet property="dataSource" destination="EK8-ey-lQi" id="hDt-af-Fis"/>
-                                    <outlet property="delegate" destination="EK8-ey-lQi" id="KoO-xR-mBy"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ylh-kO-sfi" firstAttribute="leading" secondItem="q6S-Ah-oj3" secondAttribute="leading" id="RtJ-yJ-qFx"/>
-                            <constraint firstItem="ylh-kO-sfi" firstAttribute="top" secondItem="q6S-Ah-oj3" secondAttribute="top" id="fpp-Td-Fxz"/>
-                            <constraint firstAttribute="trailing" secondItem="ylh-kO-sfi" secondAttribute="trailing" id="nsL-4e-dSO"/>
-                            <constraint firstAttribute="bottom" secondItem="ylh-kO-sfi" secondAttribute="bottom" id="sXV-Ca-OPF"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="lES-lu-duT"/>
-                    <connections>
-                        <outlet property="tableView" destination="ylh-kO-sfi" id="jIa-1k-8lk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3ux-Rj-KF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="823" y="448"/>
-        </scene>
     </scenes>
     <resources>
         <image name="logged_in" width="100" height="100"/>
         <image name="login" width="25" height="25"/>
         <image name="register" width="25" height="25"/>
-        <image name="settings" width="25" height="25"/>
     </resources>
 </document>
